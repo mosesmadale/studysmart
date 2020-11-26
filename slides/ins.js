@@ -15,7 +15,7 @@ function addSlideName() {
     let tail = array[1];
 
 
-    //document.querySelector('.name').innerHTML = `${base} - ${tail}`;
+    document.querySelector('.name').innerHTML = `${base} - ${tail}`;
 }
 
 addSlideName();
