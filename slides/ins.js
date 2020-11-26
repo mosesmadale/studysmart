@@ -5,7 +5,7 @@ let fetchedNumber = JSON.parse(localStorage.getItem('slideNumber'));
 
 
 while (fetchedNumber >= num) {
-    slides.push('Slide' + num + '.JPG');
+    slides.push('Slide' + num + '.jpeg');
     num++;
 }
 
