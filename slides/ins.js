@@ -28,18 +28,18 @@ let currentSlide = 0;
 let canvas = document.getElementById('canvas');
 
 console.log(localStorage.getItem('directory'))
-canvas.setAttribute('src', `../${localStorage.getItem('directory')}/${slides[currentSlide]}`);
+canvas.setAttribute('src', `../library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
 document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
 
 function changeSlide(direction) {
     if (direction == 'left' && currentSlide != 0) {
         currentSlide--;
-        canvas.setAttribute('src', `../${localStorage.getItem('directory')}/${slides[currentSlide]}`);
+        canvas.setAttribute('src', `../library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
         document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
     }
     if (direction == 'right' && currentSlide != slides.length - 1) {
         currentSlide++;
-        canvas.setAttribute('src', `../${localStorage.getItem('directory')}/${slides[currentSlide]}`);
+        canvas.setAttribute('src', `../library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
         document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
     }
 }
