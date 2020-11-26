@@ -26,10 +26,10 @@ nav ul {
     flex-direction: row;
     justify-content: flex-end;
 }
-nav ul li a li{
+
+nav ul li a li {
     padding-left: 20px;
 }
-
 
 nav ul>li {
     padding: 0px 20px;
@@ -37,8 +37,7 @@ nav ul>li {
     font-weight: 500;
 }
 
-
-nav a{
+nav a {
     text-decoration: none;
     color: black;
 }
@@ -65,21 +64,29 @@ nav ul>li.selected {
     border-bottom: solid rgb(0, 19, 83) 3px;
 }
 
-div.button-mini-max{
+div.button-mini-max {
     width: 100%;
     height: 100%;
-    padding: 30px;
     font-size: 2em;
     border: solid orangered 3px;
 }
 
-div.button-mini-max:hover{
+div.button-mini-max>a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 30px;
+}
+
+div.button-mini-max:hover {
     background-color: orangered;
     color: white;
     transition: all .5s ease;
 }
 
-div.button-list{
+div.button-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
@@ -90,7 +97,7 @@ section#body {
     width: 100%;
 }
 
-#text-in-headbg a{
+#text-in-headbg a {
     text-decoration: none;
     color: white;
 }
@@ -212,6 +219,46 @@ div.text-and-picture>img {
     padding-left: 50px;
 }
 
+
+/*In construction page*/
+
+div.in-construction-message {
+    width: 100%;
+    background-image: url('construction.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+}
+
+div.white-overlay {
+    background-color: rgba(255, 255, 255, 0.473);
+    font-size: 4em;
+    font-weight: 50;
+    padding: 30px;
+    text-align: center;
+    height: 500px;
+}
+
+div.button-max {
+    font-size: 1em;
+    border: solid orangered 3px;
+    margin-top: 30px;
+    background-color: rgba(255, 68, 0, 0.384);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+div.button-max:hover {
+    background-color: orangered;
+    transition: all .5s ease;
+}
+
+
+/*end of in construction page*/
+
 div.box-picture-text {
     width: 90%;
 }
@@ -229,10 +276,13 @@ html {
     scroll-behavior: smooth;
 }
 
-@media only screen and (max-width:1190px){
-    div.button-list{
+@media only screen and (max-width:1190px) {
+    div.button-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    div.white-overlay {
+        font-size: 3em;
     }
 }
 
@@ -246,9 +296,9 @@ html {
     .content-holder {
         width: 80%;
     }
-    div.button-list{
+    div.button-list {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -257,13 +307,11 @@ html {
         width: 100%;
         top: 100%;
     }
-
-    div.button-list{
+    div.button-list {
         display: grid;
         grid-template-columns: 1fr;
     }
-
-    div.button-mini-max{
+    div.button-mini-max {
         font-size: 1em;
     }
     #text-in-headbg .top {
@@ -380,7 +428,9 @@ html {
         line-height: 70px;
         padding-left: 10px;
     }
-
+    div.white-overlay {
+        font-size: 2em;
+    }
 }
 
 @media only screen and (max-width:370px) {
