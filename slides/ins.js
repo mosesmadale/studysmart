@@ -30,17 +30,20 @@ let canvas = document.getElementById('canvas');
 console.log(localStorage.getItem('directory'))
 canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
 document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
+console.log(slides[currentSlide], '@beg');
 
 function changeSlide(direction) {
     if (direction == 'left' && currentSlide != 0) {
         currentSlide--;
         canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
         document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
+        console.log(slides[currentSlide], '@--');
     }
     if (direction == 'right' && currentSlide != slides.length - 1) {
         currentSlide++;
         canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
         document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
+        console.log(slides[currentSlide], '@++');
     }
 }
 
