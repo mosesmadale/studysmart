@@ -1,7 +1,7 @@
 let slides = [];
 let num = 1;
 
-let fetchedNumber = JSON.parse(localStorage.getItem('slideNumber'));
+let fetchedNumber = JSON.parse(sessionStorage.getItem('slideNumber'));
 
 
 while (fetchedNumber >= num) {
@@ -10,7 +10,7 @@ while (fetchedNumber >= num) {
 }
 
 function addSlideName() {
-    let array = localStorage.getItem('directory').split('/');
+    let array = sessionStorage.getItem('directory').split('/');
     let base = array[0];
     let tail = array[1];
 
@@ -27,21 +27,26 @@ let currentSlide = 0;
 
 let canvas = document.getElementById('canvas');
 
-console.log(localStorage.getItem('directory'))
-canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
+console.log(sessionStorage.getItem('directory'))
+
+//key
+virtualImage();
 document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
 console.log(slides[currentSlide], '@beg');
 
 function changeSlide(direction) {
     if (direction == 'left' && currentSlide != 0) {
         currentSlide--;
-        canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
+        //key
+
+        virtualImage();
         document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
         console.log(slides[currentSlide], '@--');
     }
     if (direction == 'right' && currentSlide != slides.length - 1) {
         currentSlide++;
-        canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
+        //key
+        virtualImage();
         document.querySelector('.slide-info').innerHTML = `Slide: ${currentSlide+1} / ${slides.length}`;
         console.log(slides[currentSlide], '@++');
     }
@@ -88,5 +93,20 @@ window.onkeydown = function(e) {
         changeSlide('left')
     } else if (e.key == 'ArrowRight') {
         changeSlide('right')
+    }
+}
+
+
+
+
+function virtualImage(){
+    let img = document.createElement('img');
+
+    img.setAttribute('src',`https://mosesmadale.github.io/studysmart/library/${sessionStorage.getItem('directory')}/${slides[currentSlide]}`);
+
+    canvas.setAttribute('src', `loader.gif`);
+
+    img.onload = function(){
+        canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${sessionStorage.getItem('directory')}/${slides[currentSlide]}`);
     }
 }
