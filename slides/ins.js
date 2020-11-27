@@ -1,7 +1,7 @@
 let slides = [];
 let num = 1;
 
-let fetchedNumber = JSON.parse(sessionStorage.getItem('slideNumber'));
+let fetchedNumber = JSON.parse(localStorage.getItem('slideNumber'));
 
 
 while (fetchedNumber >= num) {
@@ -10,7 +10,7 @@ while (fetchedNumber >= num) {
 }
 
 function addSlideName() {
-    let array = sessionStorage.getItem('directory').split('/');
+    let array = localStorage.getItem('directory').split('/');
     let base = array[0];
     let tail = array[1];
 
@@ -27,7 +27,7 @@ let currentSlide = 0;
 
 let canvas = document.getElementById('canvas');
 
-console.log(sessionStorage.getItem('directory'))
+console.log(localStorage.getItem('directory'))
 
 //key
 virtualImage();
@@ -99,14 +99,14 @@ window.onkeydown = function(e) {
 
 
 
-function virtualImage(){
+function virtualImage() {
     let img = document.createElement('img');
 
-    img.setAttribute('src',`https://mosesmadale.github.io/studysmart/library/${sessionStorage.getItem('directory')}/${slides[currentSlide]}`);
+    img.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
 
     canvas.setAttribute('src', `loader.gif`);
 
-    img.onload = function(){
-        canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${sessionStorage.getItem('directory')}/${slides[currentSlide]}`);
+    img.onload = function() {
+        canvas.setAttribute('src', `https://mosesmadale.github.io/studysmart/library/${localStorage.getItem('directory')}/${slides[currentSlide]}`);
     }
 }
