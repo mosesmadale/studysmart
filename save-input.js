@@ -8,6 +8,6 @@ document.querySelectorAll('.button-mini-max').forEach(e=>{
 })
 
 function writeToWindow(directory, slideNumber){
-    sessionStorage.setItem('directory', directory);
-    sessionStorage.setItem('slideNumber', slideNumber);
+    localStorage.setItem('directory', directory);
+    localStorage.setItem('slideNumber', slideNumber);
 }
