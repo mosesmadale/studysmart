@@ -1,0 +1,31 @@
+[{
+        "lesson": "BiologyInheritance1",
+        "questions": [
+            { "question": "XY chromosome represent a male", "isTrue": "true" },
+            { "question": "Meiosis is a type of cell division", "isTrue": "true" },
+            { "question": "A recessive allele expresses over a dominant allele", "isTrue": "false" },
+            { "question": "All alleles are dominant", "isTrue": "false" },
+            { "question": "Chromosomes are found in alleles", "isTrue": "false" },
+            { "question": "Genotype is a type of phenotype", "isTrue": "false" },
+            { "question": "Father's gametes determin the gender of the child", "isTrue": "true" },
+            { "question": "Meiosis produces haploid cells", "isTrue": "true" },
+            { "question": "Mitosis produces cells with 40 chomosomes", "isTrue": "false" },
+            { "question": "All cells are diploid", "isTrue": "false" }
+        ]
+    },
+    {
+        "lesson": "BiologyInheritance2",
+        "questions": [
+            { "question": "The chance of getting a boy is 25%", "isTrue": "false" },
+            { "question": "Meiosis produces somatic cells", "isTrue": "false" },
+            { "question": "An egg cell can have a Y chomosome", "isTrue": "false" },
+            { "question": "Inheritance is the transmission of genes", "isTrue": "true" },
+            { "question": "Mutagens cause mutations", "isTrue": "true" },
+            { "question": "Phenotype = Genotype + Environment", "isTrue": "true" },
+            { "question": "Asexual reproduction causes variation in offspring", "isTrue": "false" },
+            { "question": "Survival for the fittest is natural selection", "isTrue": "true" },
+            { "question": "Sexual reproduction causes mutations", "isTrue": "false" },
+            { "question": "Plants have gametes", "isTrue": "true" }
+        ]
+    }
+]

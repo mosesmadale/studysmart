@@ -1,0 +1,549 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 50;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 20px;
+}
+
+:root {
+    --small-adapt: '';
+}
+
+a {
+    text-decoration-color: transparent;
+}
+
+@media only screen and (min-width:1024px) {
+    header {
+        width: 100%;
+        height: 70px;
+        position: sticky;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        box-shadow: 0px 24px 1px -24px black;
+    }
+    .nav-list {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        align-items: center;
+        height: 100%;
+        grid-column: 2/4;
+    }
+    .nav {
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: rgb(202, 202, 202);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        font-weight: 500;
+        opacity: 0.6;
+        transition: all .5s ease;
+    }
+    .selected {
+        opacity: 1;
+        background-color: blueviolet;
+        border: solid 3px rgba(56, 16, 94, 0.301);
+        transition: all .5s ease;
+    }
+    .label,
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .label {
+        font-size: 30px;
+        text-align: center;
+    }
+    .profile {
+        font-size: 35px;
+    }
+    *::selection {
+        background-color: transparent;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .nav {
+        color: black;
+    }
+    .nav:hover {
+        opacity: 1;
+    }
+    .question {
+        width: 55%;
+        height: 55%;
+        box-shadow: 0px 0px 60px 1px rgba(56, 16, 94, 0.301);
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .question-title {
+        font-size: 40px;
+        text-align: center;
+        font-weight: 50;
+    }
+    .start {
+        width: 80%;
+        font-size: 40px;
+        background-color: rgb(56, 16, 94);
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+        text-align: center;
+        border-bottom: solid 5px rgb(20, 6, 34);
+    }
+    .btn-cont {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont>a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont-3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont-2>a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .choose {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: 2/4;
+    }
+    .choose>div {
+        margin: 10px;
+        font-size: 20px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(56, 16, 94);
+        background-color: white;
+        border: solid rgb(20, 6, 34) 3px;
+    }
+    .choose>div:hover {
+        background-color: rgb(56, 16, 94);
+        color: white;
+        border: none;
+        transition: all .5s ease;
+    }
+    .choose>div:focus {
+        background-color: rgb(56, 16, 94);
+        color: white;
+        border: none;
+    }
+    .validation-correct {
+        position: fixed;
+        top: 85vh;
+        background-color: rgba(20, 255, 20, 0.6);
+        height: 15vh;
+        font-size: 50px;
+        font-weight: 50;
+        color: rgba(100, 100, 100, 1);
+        width: 100%;
+        text-align: center;
+        animation: slide .7s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    @keyframes slide {
+        0% {
+            top: 100vh;
+        }
+        100% {
+            top: 85vh;
+        }
+    }
+    .validation-incorrect {
+        position: fixed;
+        top: 85vh;
+        background-color: rgba(255, 20, 20, 0.6);
+        height: 15vh;
+        font-size: 50px;
+        font-weight: 50;
+        color: rgba(100, 100, 100, 1);
+        width: 100%;
+        text-align: center;
+        animation: slide .7s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .comments span {
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .comments p {
+        padding: 0px;
+        margin: 0px;
+    }
+    .comments a {
+        padding: 0px;
+        margin: 0px;
+    }
+    .percentage {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        border-radius: 10px;
+    }
+    .number,
+    .grade {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+    }
+    .final-result {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .btn-cont-3>a {
+        width: 100%;
+    }
+    .btn-cont-3>a>.start {
+        width: 100%;
+    }
+}
+
+
+/*#start{
+    background-color: rgb(117, 117, 117);
+    color: rgb(236, 236, 236);
+}*/
+
+div.instructions {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width:1024px) {
+    .nav-list>div {
+        display: none;
+    }
+    .nav-list:before {
+        content: '';
+    }
+    .nav-list {
+        font-size: 30px;
+    }
+    header {
+        width: 100%;
+        height: 70px;
+        position: sticky;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        box-shadow: 0px 24px 1px -24px black;
+    }
+    .nav-list {
+        align-items: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-column: 2/4;
+    }
+    .nav {
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: rgb(202, 202, 202);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        font-weight: 500;
+        opacity: 0.6;
+        transition: all .5s ease;
+    }
+    .label,
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .label {
+        font-size: 30px;
+        text-align: center;
+    }
+    .profile {
+        font-size: 35px;
+    }
+    *::selection {
+        background-color: transparent;
+    }
+    .question {
+        width: 81%;
+        height: 55%;
+        box-shadow: 0px 0px 60px 1px rgba(56, 16, 94, 0.301);
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        display: grid;
+    }
+    .question-title {
+        font-size: 35px;
+        text-align: center;
+        font-weight: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .start {
+        width: 80%;
+        font-size: 40px;
+        background-color: rgb(56, 16, 94);
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+        text-align: center;
+        border-bottom: solid 5px rgb(20, 6, 34);
+    }
+    .btn-cont {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont>a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont-3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-cont-2>a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .choose {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: 2/4;
+    }
+    .choose>div {
+        margin: 10px;
+        font-size: 20px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(56, 16, 94);
+        background-color: white;
+        border: solid rgb(20, 6, 34) 3px;
+    }
+    .choose>div:hover {
+        background-color: rgb(56, 16, 94);
+        color: white;
+        border: none;
+        transition: all .5s ease;
+    }
+    .choose>div:focus {
+        background-color: rgb(56, 16, 94);
+        color: white;
+        border: none;
+    }
+    .validation-correct {
+        position: fixed;
+        top: 85vh;
+        background-color: rgba(20, 255, 20, 0.6);
+        height: 15vh;
+        font-size: 50px;
+        font-weight: 50;
+        color: rgba(100, 100, 100, 1);
+        width: 100%;
+        text-align: center;
+        animation: slide .7s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    @keyframes slide {
+        0% {
+            top: 100vh;
+        }
+        100% {
+            top: 85vh;
+        }
+    }
+    .validation-incorrect {
+        position: fixed;
+        top: 85vh;
+        background-color: rgba(255, 20, 20, 0.6);
+        height: 15vh;
+        font-size: 50px;
+        font-weight: 50;
+        color: rgba(100, 100, 100, 1);
+        width: 100%;
+        text-align: center;
+        animation: slide .7s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .comments span {
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .comments p {
+        padding: 0px;
+        margin: 0px;
+    }
+    .comments a {
+        padding: 0px;
+        margin: 0px;
+    }
+    .percentage {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        border-radius: 10px;
+    }
+    .number,
+    .grade {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+    }
+    .final-result {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .btn-cont-3>a {
+        width: 100%;
+    }
+    .btn-cont-3>a>.start {
+        width: 100%;
+    }
+    header {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    .nav-list {
+        display: none;
+    }
+    header {
+        grid-template-columns: 1fr 1fr;
+    }
+    .choose {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 2/4;
+        align-items: center;
+        justify-content: center;
+    }
+    .choose>* {
+        width: 90%;
+    }
+    .start {
+        font-size: 25px;
+    }
+    .question-title {
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and(max-height:800px) {
+    .question {
+        height: 450px;
+    }
+}
