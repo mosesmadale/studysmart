@@ -27,5 +27,35 @@
             { "question": "Sexual reproduction causes mutations", "isTrue": "false" },
             { "question": "Plants have gametes", "isTrue": "true" }
         ]
+    },
+    {
+        "lesson": "ChemistryAirWater1",
+        "questions": [
+            { "question": "Nitrogen takes 78% of the Earth's atmosphere", "isTrue": "true" },
+            { "question": "Carbon Monoxide is formed from incomplete combustion", "isTrue": "true" },
+            { "question": "Carbon monoxide temporarily sticks to haemoglobin", "isTrue": "false" },
+            { "question": "Only two noble gases are inert", "isTrue": "false" },
+            { "question": "Water vapour quantities in the atmosphere stay fixed", "isTrue": "false" },
+            { "question": "Sulfur dioxide causes neutral pH rain", "isTrue": "false" },
+            { "question": "Acid rain causes soil pH to rise", "isTrue": "true" },
+            { "question": "Acid rain cannot damage buildings", "isTrue": "false" },
+            { "question": "Nitrogen can even react in extremely low temperatures", "isTrue": "false" },
+            { "question": "Catalytic converters release CO2", "isTrue": "true" }
+        ]
+    },
+    {
+        "lesson": "ChemistryAirWater2",
+        "questions": [
+            { "question": "Iron corrodes when it is in moisture", "isTrue": "false" },
+            { "question": "Rusting requires moisture and Oxygen", "isTrue": "true" },
+            { "question": "Rusing is completely unstoppable", "isTrue": "false" },
+            { "question": "Rusting and corrosion are the same thing", "isTrue": "false" },
+            { "question": "Rusted iron is chemically written as Iron (III) oxide", "isTrue": "true" },
+            { "question": "Chlorine makes water toxic", "isTrue": "false" },
+            { "question": "In sacrificial protection, a more reactive metal has to be sacrificed", "isTrue": "true" },
+            { "question": "Nitrogen and Oxygen have the same mass", "isTrue": "false" },
+            { "question": "Noble gasses take 1% of the atmosphere", "isTrue": "true" },
+            { "question": "Fresh water can be found in aquiferes", "isTrue": "true" }
+        ]
     }
 ]
