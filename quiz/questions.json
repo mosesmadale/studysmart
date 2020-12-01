@@ -57,5 +57,35 @@
             { "question": "Noble gasses take 1% of the atmosphere", "isTrue": "true" },
             { "question": "Fresh water can be found in aquiferes", "isTrue": "true" }
         ]
+    },
+    {
+        "lesson": "GeographyCoasts1",
+        "questions": [
+            { "question": "In constructive waves, there is a strong backwash", "isTrue": "false" },
+            { "question": "Bays are an erosional landform found on the coast", "isTrue": "true" },
+            { "question": "Headlands are made from hard rock", "isTrue": "true" },
+            { "question": "Spits always stretch across a river mouth", "isTrue": "false" },
+            { "question": "A Sea wall is the cheapest form of sea defences", "isTrue": "false" },
+            { "question": "There are three types of coral reefs", "isTrue": "true" },
+            { "question": "Sand bar is a type of coastal erosion", "isTrue": "false" },
+            { "question": "Longshore drift creates a spit", "isTrue": "true" },
+            { "question": "A revetment is a type of hard engineering", "isTrue": "true" },
+            { "question": "Headlands always stick in at the coastline", "isTrue": "false" }
+        ]
+    },
+    {
+        "lesson": "GeographyCoasts2",
+        "questions": [
+            { "question": "A lagoon forms when a spit joins at two headlands", "isTrue": "true" },
+            { "question": "Coral reefs need temperatures below -15 degress celcius", "isTrue": "false" },
+            { "question": "Mangrooves act as coastal protection", "isTrue": "true" },
+            { "question": "Peninsular is a piece of land sticking out into the sea", "isTrue": "true" },
+            { "question": "Sea walls are a part of soft engineering", "isTrue": "false" },
+            { "question": "Soft engineering requires alot of money to do", "isTrue": "false" },
+            { "question": "Stacks are bigger than stumps", "isTrue": "true" },
+            { "question": "Destructive waves have a weak backwash", "isTrue": "false" },
+            { "question": "Wavelength is the distance from one trough to another", "isTrue": "true" },
+            { "question": "The mouth of a river is normally fertile", "isTrue": "true" }
+        ]
     }
 ]
