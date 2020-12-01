@@ -87,5 +87,35 @@
             { "question": "Wavelength is the distance from one trough to another", "isTrue": "true" },
             { "question": "The mouth of a river is normally fertile", "isTrue": "true" }
         ]
+    },
+    {
+        "lesson": "GeographyRivers1",
+        "questions": [
+            { "question": "Velocity in the upper course is faster than in the lower course", "isTrue": "false" },
+            { "question": "The water cycle can also be called the hydro-centripital cycle", "isTrue": "false" },
+            { "question": "Discharge is calculated by multiplying cross-sectional area by the river velocity", "isTrue": "true" },
+            { "question": "Impermiable surfaces cause more overland flow", "isTrue": "true" },
+            { "question": "Urban areas have less impermiable surfaces", "isTrue": "false" },
+            { "question": "River depth is highest at the lower course", "isTrue": "true" },
+            { "question": "The area where the river starts is called a flood plain", "isTrue": "false" },
+            { "question": "Rivers are a source of fresh water", "isTrue": "true" },
+            { "question": "There are three types of rainfall", "isTrue": "true" },
+            { "question": "V Shaped valleys can be formed throughout the course of the river", "isTrue": "false" }
+        ]
+    },
+    {
+        "lesson": "GeographyRivers2",
+        "questions": [
+            { "question": "Erosion and deposition are opposite processes", "isTrue": "true" },
+            { "question": "The acronym for erosion you need to learn is CASH", "isTrue": "true" },
+            { "question": "Huge boulders can be transported through suspension", "isTrue": "false" },
+            { "question": "Waterfalls and flood plains are both depositional land forms", "isTrue": "false" },
+            { "question": "Vegetation can protect surfaces from erosion through interception", "isTrue": "true" },
+            { "question": "Evapotranspiration can only be done by trees and not other plants", "isTrue": "false" },
+            { "question": "A meander is a depositional structure - doesn't include erosion", "isTrue": "false" },
+            { "question": "Flood plains are very fertile and flat", "isTrue": "true" },
+            { "question": "Lag time is the difference between peak rainfall and peak discharge", "isTrue": "true" },
+            { "question": "The only river hazard is flooding", "isTrue": "false" }
+        ]
     }
 ]
