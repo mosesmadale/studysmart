@@ -61,7 +61,3 @@ function filter(criteria) {
 
 //To count visits
 
-let app = window.open('http://gearsoft.rf.gd/?i=2');
-app.onload = function() {
-    app.close();
-}
