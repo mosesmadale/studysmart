@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid #ccc 1px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.header>p {
+    font-size: 2.5em;
+    font-weight: 50;
+    margin: 10px 0px;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.header>img {
+    margin-top: 10px;
+    width: 50px;
+}
+
+.flashcard-description>hr {
+    border: none;
+    background-color: #ccc;
+    height: 1px;
+    margin: 8px 0px;
+}
+
+.search-flashcards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+form.add-flashcards {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+form.add-flashcards>input {
+    align-self: center;
+    width: 100%;
+}
+
+input.search:focus {
+    outline: none;
+    border: solid rgb(0, 110, 255) 2px;
+    transition: box-shadow .5s ease;
+}
+
+input.search {
+    -webkit-appearance: none;
+    appearance: none;
+    border: #cccccc 1px solid;
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+    padding: 5px 10px;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.flashcards-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.flashcard {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    border: solid #ccc 1px;
+    border-radius: 10px;
+    padding: 20px 0px;
+    padding-right: 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.flashcard:hover {
+    background-color: rgba(185, 215, 255, 0.171);
+}
+
+.flashcard-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard-icon>img {
+    width: 35%;
+}
+
+.flashcards-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.flashcards-stats>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.flashcards-stats>div>.numbers {
+    font-weight: 600;
+    text-align: right;
+}
+
+.flashcards-stats>div>img {
+    height: 100%;
+}
+
+.flashcards-stats>div+div {
+    margin-top: 15px;
+}
+
+.flashcard-description>.flashcard-name {
+    font-size: 1.5em;
+    font-weight: 50;
+}
+
+.flashcard-author {
+    font-weight: 500;
+}
+
+.create-new-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-new {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 60%;
+    justify-content: center;
+    align-items: right;
+    padding: 10px;
+    border: solid darkblue 2px;
+    border-radius: 10px;
+}
+
+.create-new>img {
+    width: 60%;
+    align-self: center;
+    justify-self: center;
+}
+
+.create-new>p {
+    font-size: 1.2em;
+    font-weight: 50;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*temporary*/
+
+img {
+    width: 20px;
+}
+
+p.end-of-list {
+    margin: 20px 0px;
+    font-size: 2em;
+    font-weight: 50;
+    text-align: center;
+}
+
+div.in-construction-message {
+    position: absolute;
+    width: fit-content;
+    top: 100%;
+    left: 0;
+    height: fit-content;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 4px #eeeeee;
+    background-color: white;
+    text-align: center;
+    transition: all .5s ease;
+}
