@@ -45,7 +45,7 @@ let questionBigHolder = {
 //fetching questions from the server
 
 let xhr = new XMLHttpRequest();
-xhr.open('GET', 'questions.json', true);
+xhr.open('GET', 'http://gearsoft.rf.gd/quiz_upload/questions.json', true);
 
 xhr.onload = function() {
     if (this.status == 200) {
