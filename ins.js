@@ -60,4 +60,3 @@ function filter(criteria) {
 }
 
 //To count visits
-
