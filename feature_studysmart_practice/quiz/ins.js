@@ -1,6 +1,6 @@
 let xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'load-object.json', true);
+xhr.open('GET', 'http://gearsoft.rf.gd/quiz_upload/load-object.json', true);
 
 xhr.onload = function() {
     if (this.status == 200) {
