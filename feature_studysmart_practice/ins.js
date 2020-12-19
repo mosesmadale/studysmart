@@ -34,7 +34,7 @@ bigFiveButtons.forEach(e => {
         if (chosenBigFive == 'Flashcards') {
             document.querySelector('iframe').setAttribute('src', './flashcards/index.html')
         } else if (chosenBigFive == 'Quizes') {
-            document.querySelector('iframe').setAttribute('src', './quiz/index.html')
+            document.querySelector('iframe').setAttribute('src', 'http://gearsoft.rf.gd/quiz_app/index.html')
         } else if (chosenBigFive == 'Structured Papers') {
             document.querySelector('iframe').setAttribute('src', './other/index.html')
         }
